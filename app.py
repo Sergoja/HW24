@@ -37,6 +37,3 @@ def perform_query() -> Union[Response, tuple[Response, int]]:
 
 if __name__ == '__main__':
     app.run()
-    # добавить команду regex
-    # добавить типизацию в проект, чтобы проходила утилиту mypy app.py
-
