@@ -1,4 +1,4 @@
-from typing import Dict, Callable, Optional, Iterable
+from typing import Dict, Callable, Optional, Iterable, Any
 
 from functions import filter_query, unique_query, limit_query, map_query, sort_query, regex_query
 
@@ -18,7 +18,7 @@ def read_file(file_name: str) -> Iterable[str]:
             yield line
 
 
-def build_query(cmd: str, value: str, file_name: str, data: Optional[Iterable[str]]) -> list[str]:
+def build_query(cmd: str, value: str, file_name: str, data: Optional[Any]) -> list[str]:
     if data is None:
         prepared_data: Iterable[str] = read_file(file_name)
     else:
